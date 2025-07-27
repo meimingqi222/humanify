@@ -8,3 +8,6 @@ dist.tar.gz
 node_modules/
 
 .idea/
+
+# Git Snapshot Manager - 快照目录
+.vscode-snapshots/

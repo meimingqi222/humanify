@@ -92,10 +92,10 @@ expect the tool to be installed globally, but they should work by replacing
 
 ### Usage
 
-Next you'll need to decide whether to use `openai`, `gemini` or `local` mode. In a
+Next you'll need to decide whether to use `openai`, `gemini`, `openrouter` or `local` mode. In a
 nutshell:
 
-* `openai` or `gemini` mode
+* `openai`, `gemini` or `openrouter` mode
   * Runs on someone else's computer that's specifically optimized for this kind
     of things
   * Costs money depending on the length of your code
@@ -133,6 +133,26 @@ humanify gemini --apiKey="your-token" obfuscated-file.js
 ```
 
 Alternatively you can also use an environment variable `GEMINI_API_KEY`. Use
+`humanify --help` to see all available options.
+
+### OpenRouter mode
+
+You'll need an OpenRouter API key. You can get one by signing up at
+https://openrouter.ai/.
+
+You need to provide the API key to the tool:
+
+```shell
+humanify openrouter --apiKey="your-token" obfuscated-file.js
+```
+
+You can also specify a different model using the `-m` parameter:
+
+```shell
+humanify openrouter -m "anthropic/claude-3.5-sonnet" --apiKey="your-token" obfuscated-file.js
+```
+
+Alternatively you can also use an environment variable `OPENROUTER_API_KEY`. Use
 `humanify --help` to see all available options.
 
 ### Local mode
